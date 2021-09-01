@@ -129,4 +129,4 @@ _`~/Library/Developer/Xcode/DerivedData/<app name>/Build/Products/Release-iphone
 
 ## License & copyright
 
-© Waleed Tariq, Waleed065
+© [Waleed Tariq](https://github.com/Waleed065)

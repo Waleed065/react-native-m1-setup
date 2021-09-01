@@ -9,35 +9,35 @@ If any of the **brew**, **cocoapods**, **ruby**, **ffi** and **ethon** packages 
 
 ### Install brew
 
-- `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 or install it from their **[official website](https://brew.sh/)**
 
 ### Install and update Ruby to lastest version
 
-- `brew install ruby`
+  brew install ruby
 
 ### Install cocoapods using gem
 
-- `sudo gem install cocoapods`
+  sudo gem install cocoapods
 
 ### Install ffi using gem
 
-- `sudo gem install ffi`
+  sudo gem install ffi
 
 ### Install ethon to latest version using gem
 
-- `sudo gem install ethon`
+  sudo gem install ethon
 
 ### Install watchman
 
-- `brew install watchman`
+  brew install watchman
 
 ## Now that the basic tools are all setup, lets now initiate a new react native project
 
 ### Initiate react native project
 
-- `npx react-native init RnTemplate --template react-native-template-typescript`
+  npx react-native init RnTemplate --template react-native-template-typescript
 
 # IOS Setup
 
@@ -114,10 +114,9 @@ Follow any of the two steps
 
 # ANDROID Setup
 
-1. open project with android studio
-2. upgare gradle properties for project
-3. set java sdk 11 as default
-   `
+  1. open project with android studio
+  2. upgare gradle properties for project
+  3. set java sdk 11 as default
 
 -------------------------------><-------------------------------------
 

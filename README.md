@@ -43,7 +43,7 @@ or install it from their **[official website](https://brew.sh/)**
 
 Follow any of the two steps
 
-1. ## Recommended, copy post below script in ios/PodFile
+## 1. Recommended, copy post below script in ios/PodFile
 
 - replace inplace of post_install script
 
@@ -78,7 +78,7 @@ Follow any of the two steps
         `sed -i -e $'s/__IPHONE_10_0/__IPHONE_12_0/' Pods/RCT-Folly/folly/portability/Time.h`
       end
 
-2. ## other wise perform these instructions
+## 2. Else perform these instructions
 
 - create a bridging file
 

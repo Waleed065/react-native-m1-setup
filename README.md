@@ -7,43 +7,36 @@ React Native Setup On Macbook M1 Natively. No Rotteta Needed.
 Make sure you have node installed as well as the Android Studio and Xcode are installed to their latest version.
 If any of the **brew**, **cocoapods**, **ruby**, **ffi** and **ethon** packages is previously installed using rosetta 2, then uninstall them completely and follow along.
 
-### Install brew
-
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+Install brew
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 
 or install it from their **[official website](https://brew.sh/)**
 
-### Install and update Ruby to lastest version
+Install and update Ruby to lastest version
+    brew install ruby
 
-  brew install ruby
+Install cocoapods using gem
+    sudo gem install cocoapods
 
-### Install cocoapods using gem
+Install ffi using gem
+    sudo gem install ffi
 
-  sudo gem install cocoapods
+Install ethon to latest version using gem
+    sudo gem install ethon
 
-### Install ffi using gem
+Install watchman
+    brew install watchman
 
-  sudo gem install ffi
+Now that the basic tools are all setup, lets now initiate a new react native project
 
-### Install ethon to latest version using gem
+Initiate react native project
+    npx react-native init RnTemplate --template react-native-template-typescript
 
-  sudo gem install ethon
-
-### Install watchman
-
-  brew install watchman
-
-## Now that the basic tools are all setup, lets now initiate a new react native project
-
-### Initiate react native project
-
-  npx react-native init RnTemplate --template react-native-template-typescript
-
-# IOS Setup
+## IOS Setup
 
 Follow any of the two steps
 
-## 1. Recommended, copy post below script in ios/PodFile
+### 1. Recommended, copy post below script in ios/PodFile
 
 - replace inplace of post_install script
 
@@ -78,7 +71,7 @@ Follow any of the two steps
         `sed -i -e $'s/__IPHONE_10_0/__IPHONE_12_0/' Pods/RCT-Folly/folly/portability/Time.h`
       end
 
-## 2. Else perform these instructions
+### 2. Else perform these instructions
 
 - create a bridging file
 
@@ -112,7 +105,7 @@ Follow any of the two steps
 
 -------------------------------><-------------------------------------
 
-# ANDROID Setup
+## ANDROID Setup
 
   1. open project with android studio
   2. upgare gradle properties for project

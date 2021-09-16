@@ -94,6 +94,7 @@ remember: On ios react native run via xcode and not via npx
 - add **arm64** to build settings devices
 
 - add below command to podFile, under **post_install** script
+
         //...
         installer.pods_project.build_configurations.each do |config|
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
@@ -101,6 +102,7 @@ remember: On ios react native run via xcode and not via npx
         //...
 
 - add below command to ios/{project_name}/AppDelegate.m
+
         //...
         #import "AppDelegate.h"
         // ADD THIS
@@ -129,12 +131,12 @@ upgrade android studio to latest version which supports m1 machines
 1. open android folder of react native project with android studio
 2. if android studio promtes to upgrade gradle properties then upgrade them
 3. set **java sdk 11** as default
-  - **Android Studio** in nav bar of your mac
-  - Click **Preferences**
-  - Click **Build, Execution, Deployment**
-  - Click **Build Tools**
-  - Click **Gradle**
-  - select **11 version 11..... under Gradle JDK option**. if not found then download it and add it
+    - **Android Studio** in nav bar of your mac
+    - Click **Preferences**
+    - Click **Build, Execution, Deployment**
+    - Click **Build Tools**
+    - Click **Gradle**
+    - select **11 version 11..... under Gradle JDK option**. if not found then download it and add it
 
 open your code editor and run
         npx react-native run-android

@@ -47,6 +47,7 @@ Follow any of the two steps
 
 - replace inplace of post_install script
 
+      // ...
       post_install do |installer|
         react_native_post_install(installer)
 
@@ -77,20 +78,29 @@ Follow any of the two steps
 
         `sed -i -e $'s/__IPHONE_10_0/__IPHONE_12_0/' Pods/RCT-Folly/folly/portability/Time.h`
       end
+      //...
+
+After that navigate to ios directory and run
+pod install
+
+open `[app name].xcworkspace` file in xcode and clean the project with (shift + cmd + k) keys combination.
+Now run build command from xcode
+remember: On ios react native run via xcode and not via npx
 
 ### 2. Else perform these instructions
 
-- create a bridging file
+- open `[app name].xcworkspace` file in xcode create a bridging file
 
-      - add arm64 to build settings devices
-      - add below command to podFile, under post_install
+- add **arm64** to build settings devices
+
+- add below command to podFile, under **post_install** script
         //...
         installer.pods_project.build_configurations.each do |config|
         config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
         end
         //...
 
-      - add below command to ios/{project_name}/AppDelegate.m
+- add below command to ios/{project_name}/AppDelegate.m
         //...
         #import "AppDelegate.h"
         // ADD THIS
@@ -114,15 +124,25 @@ Follow any of the two steps
 
 ## ANDROID Setup
 
-  1. open project with android studio
-  2. upgare gradle properties for project
-  3. set java sdk 11 as default
+upgrade android studio to latest version which supports m1 machines
 
+1. open android folder of react native project with android studio
+2. if android studio promtes to upgrade gradle properties then upgrade them
+3. set **java sdk 11** as default
+  - **Android Studio** in nav bar of your mac
+  - Click **Preferences**
+  - Click **Build, Execution, Deployment**
+  - Click **Build Tools**
+  - Click **Gradle**
+  - select **11 version 11..... under Gradle JDK option**. if not found then download it and add it
+
+open your code editor and run
+        npx react-native run-android
 -------------------------------><-------------------------------------
 
 🎉 **Thats all** 🎉
 
-## release file can be found under
+### release file can be found under
 
 _`~/Library/Developer/Xcode/DerivedData/<app name>/Build/Products/Release-iphoneos/<appname>`_
 
